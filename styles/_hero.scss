@@ -1,0 +1,147 @@
+// Variables
+// Color
+$black: #2a2a2a;
+$white: #fff;
+$orange: #F1A008;
+$oangeStrong: #F25E08;
+$yellow: #F1E306;
+$green: #0AB88A;
+// Fontsize
+$fsize14: 14px;
+$fsize18: 18px;
+$fsize36: 36px;
+$fsize64: 64px;
+// Fontweight
+$fweight400: 400;
+$fweight500: 500;
+$fweight600: 600;
+$fweight700: 700;
+// Variables: END ============
+// Hero
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    // Hero Left
+    .hero-left {
+        position: relative;
+        animation: roll-in-blurred-left 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        @keyframes roll-in-blurred-left {
+            0% {
+                transform: translateX(-1000px) rotate(-720deg);
+                filter: blur(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) rotate(0deg);
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+        .img-tshirt {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    // Hero Right
+    .hero-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        .hero-title {
+            font-size: $fsize64;
+            font-weight: $fweight500;
+            color: $white;
+            margin-bottom: 20px;
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+        .hero-subtitle {
+            font-size: $fsize18;
+            font-weight: $fweight400;
+            color: $white;
+            margin-bottom: 20px;
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+        @keyframes tracking-in-expand {
+            0% {
+                letter-spacing: -0.5em;
+                opacity: 0;
+            }
+            40% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .btn-primary {
+            font-size: $fsize14;
+            font-weight: $fweight500;
+            color: $white;
+            background: $green;
+            transition: 0.5s ease;
+            animation: heartbeat 1.5s ease-in-out 1s infinite both;
+            &:hover {
+                background: #088362;
+            }
+            @keyframes heartbeat {
+                from {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    -webkit-transform-origin: center center;
+                    transform-origin: center center;
+                    -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+                }
+                10% {
+                    -webkit-transform: scale(0.91);
+                    transform: scale(0.91);
+                    -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+                }
+                17% {
+                    -webkit-transform: scale(0.98);
+                    transform: scale(0.98);
+                    -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+                }
+                33% {
+                    -webkit-transform: scale(0.87);
+                    transform: scale(0.87);
+                    -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+                }
+                45% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+                }
+            }
+        }
+    }
+    // Social Media
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        .social-item {
+            padding: 0 20px;
+            .social-link {
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+// Hero: END =================

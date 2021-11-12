@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IqbalStore</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ICON -->
+    <link rel="shortcut icon" href="images/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/img/favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="container">
+        <div class="navbar">
+            <!-- BRAND -->
+            <a href="index.html" class="navbar-brand">
+                <img class="img-brand" src="images/img/logoWhite.svg" alt="Logo Iqbal Store">
+                <p class="name-brand">IqbalFamilyStore</p>
+            </a>
+            <!-- LINKS -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" data-link class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" data-link class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" data-link class="nav-link">Shop</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SHOP -->
+    <header class="shop container">
+        <div class="circle"></div>
+        <div class="slides">
+            <div class="mySlides">
+                <img class="img-tshirt" src="images/content/img-tshirt.svg" alt="T-Shirt">
+                <div class="text-shop">
+                    <h3 class="title-img" style="color: yellow;">T-shirt 1</h3>
+                    <p class="subtitle-img">The future</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img class="img-tshirt" src="images/content/img-tshirt.svg" alt="T-Shirt">
+                <div class="text-shop">
+                    <h3 class="title-img" style="color: white;">T-shirt 2</h3>
+                    <p class="subtitle-img">The future</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img class="img-tshirt" src="images/content/img-tshirt.svg" alt="T-Shirt">
+                <div class="text-shop">
+                    <h3 class="title-img" style="color: blue;">T-shirt 3</h3>
+                    <p class="subtitle-img">The future</p>
+                </div>
+            </div>
+        </div>
+        <a href="https://www.instagram.com/iqbalzayyan/" target="_blank" class="secondary">
+            <button class="btn btn-secondary">Buy DM<br>via Instagram</button>
+        </a>
+        <!-- CONTROL -->
+        <div class="control">
+            <button class="prev" onclick="plusSlides(-1)">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.4792 8.06247L32.7709 4.37497L12.1667 25L32.7917 45.625L36.4792 41.9375L19.5417 25L36.4792 8.06247Z" />
+                </svg>                    
+            </button>
+            <button class="next" onclick="plusSlides(1)">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9792 42.1458L16.6667 45.8333L37.5 25L16.6667 4.16666L12.9792 7.85416L30.125 25L12.9792 42.1458Z" />
+                </svg>                    
+            </button>
+        </div>
+    </header>
+
+    <footer class="copyright c-shop container">
+        <p class="copyright-text">© 2019-2021 Iqbal Family Store</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

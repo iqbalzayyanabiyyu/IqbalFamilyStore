@@ -1,0 +1,168 @@
+@import "hero";
+@import "about";
+@import "shop";
+// Variables
+// Color
+$black: #2a2a2a;
+$gray: #aaaaaa;
+$white: #fff;
+$orange: #F1A008;
+$oangeStrong: #F25E08;
+$yellow: #F1E306;
+$green: #0AB88A;
+// Fontsize
+$fsize14: 14px;
+$fsize18: 18px;
+$fsize36: 36px;
+$fsize64: 64px;
+// Fontweight
+$fweight400: 400;
+$fweight500: 500;
+$fweight600: 600;
+$fweight700: 700;
+// Variables: END ============
+// All Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $black;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1286px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Active
+.active-link {
+    font-size: $fsize18;
+    font-weight: $fweight500;
+    color: $white !important;
+    position: relative;
+}
+
+.active-link::after {
+    content: " ";
+    width: 51px !important;
+    height: 2px;
+    background: $white;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+
+// Decor
+.circle {
+    width: 433px;
+    height: 433px;
+    border: 50px solid $green;
+    border-radius: 100%;
+}
+
+// Button
+button {
+    border: none;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+// All Styles: END ================
+// Navbar
+.navbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 36px;
+    // BRAND
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .img-brand {
+            width: 44px;
+            height: 44px;
+        }
+        .name-brand {
+            font-size: $fsize18;
+            font-weight: $fweight700;
+            color: $white;
+        }
+    }
+    // LINKS
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .nav-item {
+            padding: 0 60px;
+            position: relative;
+            .nav-link {
+                font-size: $fsize18;
+                font-weight: $fweight500;
+                color: $gray;
+                position: relative;
+                &:hover {
+                    color: $white;
+                }
+            }
+            .nav-link::after {
+                content: " ";
+                width: 0;
+                height: 2px;
+                background: $white;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition: all 0.5s ease;
+            }
+            .nav-link:hover::after {
+                width: 51px;
+            }
+        }
+    }
+}
+
+// Navbar: END ====================
+// Copyright
+.copyright {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    .copyright-text {
+        color: #fff;
+    }
+}
+
+.c-about {
+    text-align: end;
+}
+
+.c-shop {
+    text-align: center;
+}
+
+// Copyright: END =================
